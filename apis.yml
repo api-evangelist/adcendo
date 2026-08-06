@@ -1,8 +1,18 @@
 aid: adcendo
 name: Adcendo
-description: 'Adcendo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Adcendo ApS is a clinical-stage biopharmaceutical company headquartered
+  in Copenhagen, Denmark, with US operations in Boston, Massachusetts, developing a
+  new generation of antibody-drug conjugates (ADCs) for cancers with high unmet medical
+  need. Founded in 2017 out of research by Lars Henning Engelholm and Niels Behrendt,
+  the company advances a clinical and pre-clinical pipeline that includes ADCE-T02
+  (targeting Tissue Factor, in the Phase 1b Tiffany-01 study across advanced solid
+  tumors), ADCE-D01 (targeting uPARAP, granted FDA Fast Track designation for soft
+  tissue sarcoma), and the pre-clinical ADCE-B05. Adcendo is a privately held,
+  venture-backed therapeutics developer; it publishes a corporate website, pipeline
+  and publications pages, and investor press releases, but it operates no developer
+  program, public API, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/adcendo/refs/heads/main/apis.yml
+image: https://adcendo.com/wp-content/uploads/adcendo-logo.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +22,13 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Oncology
+- Life Sciences
+- Antibody-Drug Conjugates
+- Clinical Stage
+- Denmark
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adcendo-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://adcendo.com/
+- type: About
+  url: https://adcendo.com/adcendo/about/about-adcendo/
+- type: Pipeline
+  url: https://adcendo.com/adcendo/our-science/pipeline/
+- type: Publications
+  url: https://adcendo.com/adcendo/our-science/key-publications/
+- type: PressReleases
+  url: https://adcendo.com/adcendo/investors/press-releases/
+- type: BlogRSS
+  url: https://adcendo.com/feed/
+- type: Careers
+  url: https://adcendo.com/adcendo/your-careers-and-our-values/
+- type: Contact
+  url: https://adcendo.com/contact/
+- type: PrivacyPolicy
+  url: https://adcendo.com/privacy-policy/
+- type: CookiePolicy
+  url: https://adcendo.com/cookie-policy/
+- type: LLMsTxt
+  url: llms/adcendo-llms.txt
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Adcendo is a clinical-stage biopharmaceutical company developing antibody-drug
+    conjugates; its only machine-readable endpoint is the stock WordPress REST API
+    of its marketing CMS at /wp-json/ (LiteSpeed, Wordfence, Divi and Google Site Kit
+    plugin routes), and every OpenAPI, GraphQL, MCP and A2A discovery path on adcendo.com
+    returns 404.
+  evidence:
+  - url: https://adcendo.com/openapi.json
+    status: 404
+  - url: https://adcendo.com/graphql
+    status: 404
+  - url: https://adcendo.com/.well-known/agent-card.json
+    status: 404
+  - url: https://adcendo.com/.well-known/security.txt
+    status: 404
+  - url: https://adcendo.com/wp-json/
+    status: 200
+  checked: '2026-08-06'

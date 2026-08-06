@@ -42,5 +42,26 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adcendo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Adcendo ApS is a clinical-stage biopharmaceutical company headquartered in Copenhagen, Denmark,
+with US operations in Boston, Massachusetts, developing a new generation of antibody-drug
+conjugates (ADCs) for cancers with high unmet medical need. Founded in 2017 out of research by
+Lars Henning Engelholm and Niels Behrendt, its pipeline includes ADCE-T02 (Tissue Factor, in the
+Phase 1b Tiffany-01 study), ADCE-D01 (uPARAP, granted FDA Fast Track designation for soft tissue
+sarcoma), and the pre-clinical ADCE-B05.
+
+- https://adcendo.com/
+
+## API coverage
+
+Adcendo publishes **no public API, no developer portal, and no machine-readable API contract**.
+Probed on 2026-08-06: `/openapi.json`, `/swagger.json`, `/api-docs`, `/docs`, `/developers`,
+`/api`, `/graphql`, `/llms.txt`, `/.well-known/agent-card.json`, `/.well-known/agent.json`,
+`/.well-known/security.txt`, `/.well-known/openid-configuration`,
+`/.well-known/oauth-authorization-server`, `/.well-known/api-catalog` and
+`/.well-known/ai-plugin.json` all returned **404**; there is no `adcendo` GitHub organization.
+The one JSON endpoint on the host is `https://adcendo.com/wp-json/` — the stock WordPress REST
+API of the marketing CMS (LiteSpeed, Wordfence, Divi, Google Site Kit plugin routes), which is
+website infrastructure and not a product API, so it is not cataloged as a developer offering.
+
+This is an honest zero for a therapeutics developer, not a gap the company is expected to close.
+It is recorded in `apis.yml` as `x-coverage: {state: none, reason: not-a-software-company}`.
