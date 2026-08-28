@@ -12,6 +12,17 @@ description: 'Adcendo ApS is a clinical-stage biopharmaceutical company headquar
   and publications pages, and investor press releases, but it operates no developer
   program, public API, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/adcendo/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://adcendo.com/wp-content/uploads/adcendo-logo.png
 x-type: company
 x-source: harvest:secondary-market
